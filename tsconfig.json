@@ -3,14 +3,16 @@
     "target": "esnext",
     "module": "commonjs",
     "strict": true,
+    "moduleResolution": "node",
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "outDir": "dist",
+    "types": ["jest", "node"],
+    "outDir": "./src/dist",
     "baseUrl": "./src",
     "paths": {
       "@/*": ["*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "cypress/**/*.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "cypress"]
 }
