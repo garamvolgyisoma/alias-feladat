@@ -25,6 +25,11 @@ submitButton.onclick = () => {
         return;
     }
 
+    if (uInputAsNum % 1 !== 0) {
+        alert("Input must be an integer!");
+        return;
+    }
+
     //intToRoman(uInputAsNum);
 
     numberInput.value = '';
