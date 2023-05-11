@@ -1,4 +1,4 @@
-//import intToRoman from "./intToRoman";
+import intToRoman from "./intToRoman";
 
 const app = document.getElementById("app");
 
@@ -30,8 +30,14 @@ submitButton.onclick = () => {
         return;
     }
 
-    //intToRoman(uInputAsNum);
+    updateOutput(intToRoman(uInputAsNum));
 
     numberInput.value = '';
 };
 app?.appendChild(submitButton);
+
+const outputP = document.createElement("p");
+app?.appendChild(outputP);
+const updateOutput = (newOutput:string) => {
+    outputP.innerHTML = newOutput;
+}
