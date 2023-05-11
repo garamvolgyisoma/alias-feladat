@@ -2,7 +2,7 @@ import Cypress from 'cypress';
 
 describe('Generating a roman number', () => {
   it('Converts the arabic number into roman number', () => {
-    cy.visit('/');
+    cy.visit('../../src/index.html');
 
     cy.get('[data-testid="numberInput"]').type('25');
 
