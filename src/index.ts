@@ -41,3 +41,25 @@ app?.appendChild(outputP);
 const updateOutput = (newOutput:string) => {
     outputP.innerHTML = newOutput;
 }
+
+const headline = document.createElement("h1");
+headline.innerHTML = "Type an integer between 1 and 3999 to convert it into a roman number!";
+app?.prepend(headline);
+
+//styling
+if (app) {
+    document.body.style.margin = "0";
+    document.body.style.padding = "0";
+    document.body.style.width = "100%";
+    document.body.style.backgroundColor = "burlywood";
+    app.style.margin = "2rem 4rem";
+    app.style.display = "flex";
+    app.style.flexDirection = "column";
+    headline.style.fontSize = "18px";
+    headline.style.textAlign = "center";
+    numberInput.style.borderWidth = "0";
+    numberInput.style.textAlign = "center";
+    submitButton.style.borderWidth = "0";
+    outputP.style.fontSize = "14px";
+    outputP.style.textAlign = "center";
+}
